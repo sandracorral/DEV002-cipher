@@ -1,0 +1,21 @@
+/*CSS Style Sheet Cipher Dev002*/
+
+/*background*/
+
+body {
+    background-image: url("https://img.freepik.com/premium-photo/top-view-desk-with-thins-corner_23-2148110222.jpg?w=2000");
+    background-size: cover;
+    }
+
+/*text format*/
+body {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 10pt;
+    color: #905858;
+    text-align: center;
+    padding: 200px 5px 20px 20px;
+   }
+
+
+
+   
