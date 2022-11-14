@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cifrado César</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    
+    <h1>Diario en línea con cifrado César</h1>
+    <div>
+      <h2>¿Te gustaría cifrar las entradas de tu diario para que nadie más las pueda leer?</h2>
+      <p>Con el cifrado César puedes asegurarte de que nadie más que tú podrá saber qué escribes en las entradas de tu diario.</p>
+    </div>
+
+    <div>
+      <h3>¿Qué texto te gustaría cifrar o descifrar?</h3>
+      <br>
+      <textarea id="CajaDeTexto" name="CajaTexto" rows="4" cols="50">
+        Introduce tu texto aquí
+      </textarea>
+    </div>
+
+      <h4>Desplazamiento:</h4>
+      <input type="number" id="desplazamiento" size="4">
+
+    <div>        
+      <button type="button" id="Cifrar">Cifrar</button>
+      <button type="button" id="Descifrar">Descifrar</button>
+    </div> 
+
+    <div>
+      <h5> Texto cifrado: </h5>
+      <textarea id="MensajeCifrado" name="MensajeCifrado" rows="4" cols="50"> </textarea>
+    </div>
+
+    <script src="index.js" type="module"></script>
+
+  </body>
+
+  <footer>
+  </footer>
+</html>
