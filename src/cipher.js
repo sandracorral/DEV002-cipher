@@ -1,43 +1,47 @@
 
 const cipher = {
-  encode: (offset, string) {
+
+  //para cifrar el texto//
+  encode: (offset, string) => {
+
+    //TypeError//
+    if (!offset) {
+      throw new TypeError("Define tu desplazamiento")
+    }
+    if (!string) {
+      throw new TypeError("Escribe tu texto")
+    }
+
+    //Cifrar//
     if (!string)
       return "";
+    //constante para utilizar solo letras mayúsculas//
     const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    //fórmula para el cifrado//
     offset = (offset % 26 + 26) % 26;
     return string.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) + offset) % 26]);
   },
 
-  decode: (offset, string) {
+  //para descifrar el texto//
+  decode: (offset, string) => {
+
+    //TypeError//
+    if (!offset) {
+      throw new TypeError("Define tu desplazamiento")
+    }
+    if (!string) {
+      throw new TypeError("Escribe tu texto")
+    }
+
+    //Descifrar//
     if (!string)
       return "";
+    //constante para utilizar solo letras mayúsculas//
     const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    //fórmula para descifrar el texto//
     offset = (offset % 26 - 26) % 26;
     return string.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) - offset) % 26]);
   }
 };
 
 export default cipher;
-
-
-
-/* Funciones cifrado*/
-/*
- function cifrar(texto, desplazamiento) {
-  if (!texto)
-      return "";
-  const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  desplazamiento = (desplazamiento % 26 + 26) % 26;
-  return texto.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) + desplazamiento) % 26]);
-}
-
-Funciones descifrado
-
-function descifrar(texto, desplazamiento) {
-  if (!texto)
-      return "";
-  const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  desplazamiento = (desplazamiento % 26 - 26) % 26;
-  return texto.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) - desplazamiento) % 26]);
-}
-*/
